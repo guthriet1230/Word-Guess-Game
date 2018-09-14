@@ -1,190 +1,197 @@
 /* ------------------------------
 HEADER 
 --------------------------------*/
-header{
-    background:white;
+header {
+  background: white;
 }
 
-header img{
-    width:60%;
-    text-align:center;
-    position:relative;
-   margin-left:20%;
-   margin-right:20%;
+header img {
+  width: 60%;
+  text-align: center;
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-
 
 /* ------------------------------
 SECTION 
 --------------------------------*/
-.row{
-    margin-top:40px;
-    margin-bottom:100px;
+.row {
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 
-section{
+/* section{
     width:50%;
-    background:white;
+    background-color:rgba(0, 0, 0, 0.356);
     border: 1px grey solid;
     display:inline-block;
     margin: auto auto;
-  
     line-height:.5;
     box-sizing:border-box;
     border-radius:15px;
-    /* margin-left:25%;
-    margin-right:50%;
-    float:left; */
+   
+} */
+
+.section-container {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.356);
+  border: 1px grey solid;
+  display: inline-block;
+  margin: auto auto;
+  line-height: 0.5;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
-.section-paragraph{
-    margin:10px auto;
-    font-family: 'Gamja Flower', cursive;
-    font-weight:bold;
-    font-size:25px;
+.section-paragraph {
+  margin: 10px auto;
+  font-family: "Gamja Flower", cursive;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 15px;
 }
 
-.section-header{
-    font-family: 'Luckiest Guy', cursive;
-    text-align:center;
-    padding-top:5px;
-    padding-bottom:5px;
+.section-header {
+  font-family: "Luckiest Guy", cursive;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-h3{
-    text-decoration: underline;
-    font-size:25px;
+h3 {
+  text-decoration: underline;
+  font-size: 25px;
 }
 
 /* ------------------------------
 ASIDE 
 --------------------------------*/
 
+.aside-header {
+  font-family: "Luckiest Guy", cursive;
+  text-align: center;
 
-.aside-header{
-    font-family: 'Luckiest Guy', cursive;
-    text-align:center;
-    background-color: white;
-    padding-top:10px;
-    padding-bottom:10px;
-    border-radius:15px;
-   
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
 }
 
-h2{ 
-    font-size:25px;
-    margin-top:auto;
-    margin-bottom:auto;
+h2 {
+  font-size: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.aside-container{
-    width:85%;
-    /* margin: 50px auto; */
-    background-color: white;
-    position:relative;
-    border:1px grey solid;
-    display:inline-block;
-    border-radius:15px;
-}
-
-.aside-paragraph{
-    width: 100%;
-    position:absolute;
-    bottom:15%;
-    /* border: 1px grey solid; */
-    text-align: center;
-    font-family: 'Luckiest Guy', cursive;
-    font-size:25px;
+aside {
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.356);
+  position: relative;
+  border: 1px grey solid;
+  display: inline-block;
+  border-radius: 15px;
 }
 
-#executioner{
-    width:50px;
-    position:absolute;
-    bottom:5px;
-    right:5px;
+.aside-paragraph {
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 25px;
 }
 
-#hangman{
-    height:370px;
-    margin:5px;
+#executioner {
+  width: 50px;
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+}
+
+#hangman {
+  height: 370px;
+  margin: 5px;
+  margin-left: 15px;
+  margin-top: 0;
 }
 /* ------------------------------
 FOOTER 
 --------------------------------*/
 
-footer{
-    background-color: rgba(48, 47, 41, 0.9);
-    height:70px;
-    position:relative;
-    border-top:3px green solid;
+footer {
+  background-color: rgba(48, 47, 41, 0.9);
+  height: 70px;
+  position: relative;
+  border-top: 3px green solid;
 }
 
-footer img{
-    width:50px;
-    text-align:center;
-    margin:auto;
-    position:relative;
+footer img {
+  width: 50px;
+  text-align: center;
+  margin: auto;
+  position: relative;
 }
 
-.footer-container{
-    text-align:center;
+.footer-container {
+  text-align: center;
 }
 
-#github{
-    border-radius:50%;
-    margin:10px;
+#github {
+  border-radius: 50%;
+  margin: 10px;
 }
 
-#linkedin{
-    border-radius:6%;
-    margin:10px;
+#linkedin {
+  border-radius: 6%;
+  margin: 10px;
 }
 
-#gmail{
-    border-radius:5%;
-    margin:10px;
-    margin-bottom:15px;
-
+#gmail {
+  border-radius: 5%;
+  margin: 10px;
+  margin-bottom: 15px;
 }
 
 /* ------------------------------
 MEDIA QUERIES  
 --------------------------------*/
-
-/* ----------------------
-Media Screen 980 
-------------------------- */
-
-@media screen and (min-width: 769px) and (max-width: 980px) {
-
-
+h2,
+h3,
+p {
+  color: white;
 }
-
 
 /* ----------------------
 Media Screen 768px 
 ------------------------- */
 
-@media screen and (min-width: 641px) and (max-width: 768px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  div.row {
+    width: 100%;
+  }
 
-    div.row{
-        width:100%;
-    }
+  section {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 0;
+    border: none;
+  }
 
-section{
-    width:100%;
-}
+  .section-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    border: none;
+  }
 
-aside{
-    width:100%;
-}
+  aside {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
+    border-radius: 0;
+  }
 
-/* ----------------------
-Media Screen 640px 
-------------------------- */
-
-@media screen and (max-width: 640px) {
-    header {
-
-    }
-
+  .aside-header {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
 }

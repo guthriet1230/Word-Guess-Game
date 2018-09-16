@@ -125,7 +125,7 @@ footer {
 }
 
 footer img {
-  width: 50px;
+  width: 40px;
   text-align: center;
   margin: auto;
   position: relative;
@@ -143,12 +143,14 @@ footer img {
 #linkedin {
   border-radius: 6%;
   margin: 10px;
+  width:35px;
 }
 
 #gmail {
   border-radius: 5%;
   margin: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  width:35px;
 }
 
 /* ------------------------------

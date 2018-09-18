@@ -1,23 +1,28 @@
+// -------------------------------------
+// LISTING VARIABLES
+// -------------------------------------
+
 var wins = 0;
 var loses = 0;
 
 // develop arrays for each letter and word
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "V", "w", "X", "y", "z"]
-var wordList = ["fairy", "shrek", "snow white", "seven dwarfs", "prince charming", "simba", "mustafa", "mickey mouse", "griffin", "centaur", "siren", "minotaur", "chimera", "phoenix", "unicorn", "leprechaun", "donald duck", "elsa", "princess jasmine", "buzz lightyear", "cinderella", "tinker bell", "peter pan", "alice in wonderland", "cheshire cat"];
+var wordList = ["fairy", "gremlin", "dragon", "shrek",  "simba", "mustafa", "griffin", "centaur", "siren", "minotaur", "chimera", "phoenix", "unicorn", "leprechaun",  "elsa",  "cinderella"];
 
-// develop arrays for the right word and wrong guesses
-
+// develop empty arrays for the right word and wrong guesses and underscores
 var rightGuess = [];
 var wrongGuess = [];
-
-// display underscores
-var underScore =[];
+var underScore = [];
 
 // choose a random word
 var random = Math.floor((Math.random() * wordList.length));
 var chosenWord = wordList[random];
 console.log(chosenWord);
 
+
+// -------------------------------------
+// FUNCTIONS
+// -------------------------------------
 
 // underscores our random word
 function startup(){
@@ -32,12 +37,15 @@ console.log(startup());
 // underscore.textContent = "";
 
 
-
 // EVENT
-document.onkeyup = function(event) {
+document.onkeyup = function keyup() {
     var userGuess = event.key;
     console.log(userGuess);
+    document.getElementById("letters-guessed").textContent = userGuess;
 }
+
+
+
    
    
 // IF RIGHT GUESS, PUSH TO RIGHT ARRAY
@@ -46,22 +54,22 @@ document.onkeyup = function(event) {
         console.log(rightGuess);
     }
 
-// // IF WRONG GUESS, PUSH TO WRONG ARRAY
-//     else {
-//         wrongGuess.push(keyword);
-//         console.log(wrongGuess);
-//     }
+// IF WRONG GUESS, PUSH TO WRONG ARRAY
+    else {
+        wrongGuess.push(userGuess);
+        console.log(wrongGuess);
+    }
+
     
-
-
-
-
-
-
-
 
 // if userGuess == alphabet display 
 
+// if userGuess == rightGuess {
+
+
+// if userGuess > chosenWord.length {
+//     alert("you've lost")
+// }
 
 
 
@@ -133,3 +141,51 @@ document.onkeyup = function(event) {
 //     winsText.textContent = "wins: " + wins;
 //     lossesText.textContent = "losses: " + losses;
 //     tiesText.textContent = "ties: " + ties;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// OFFICE HOURS
+
+var teams = ['bears', 'seahawks', 'patriots', 'losers, packers']
+var values = [ 'great', 'suck, but only today', 'ya ya ya']
+
+// lets write the above cleaner 
+var teamInfo = [
+    {name: 'bears', value: 'great'},
+    {name: 'Seahawks', value: 'suck, but only today'},
+    {name: 'Patriots', value: 'ya ya ya'},
+    {name: 'packers', value: 'torn acl'}
+]
+
+// lets make the above alert a specific squence
+// var randomNumber = Math.floor(Math.random() * teamInfo.lenght);
+// console.log(randomNumber);
+// var selectedTeam = (teamInfo[randomNumber]);
+// alert("hey, the " + selectedTeam.name + "are" + selectedTeam['value']);
+
+// lets make the above clean and reusable!
+var expressHowYouFeel = function(teamArray){
+    var randomNumber =Math.floor(Math.random() * teamInfo.lenght);
+    var selectedTeam = (teamInfo[randomNumber]);
+    // alert("hey, the " + selectedTeam.name + "are" + selectedTeam['value']);
+    return "hey, the " + selectedTeam.name + "are" + selectedTeam['value']
+}
+
+//lets call the function
+// teamInfoFn()
+
+// Now we can comment lines 168-172 
+// we dont want it to be an alert, so lets comment line 178 and return the function
+
+console.log(expressHowYouFeel(teamInfo))
+document.write(expressHowYouFeel(teamInfo))

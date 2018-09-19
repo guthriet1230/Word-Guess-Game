@@ -64,6 +64,12 @@ h3 {
   font-size: 25px;
 }
 
+#score-wins, #score-losses, #guesses-left, #letters-guessed{
+  color:black;
+  font-weight:900;
+  font-size:37px;
+}
+
 /* ------------------------------
 ASIDE 
 --------------------------------*/

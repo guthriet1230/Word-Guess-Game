@@ -1,3 +1,9 @@
+#backgroundimg{
+  position:fixed;
+  z-index:-100;
+  top:30px;
+}
+
 /* ------------------------------
 HEADER 
 --------------------------------*/
@@ -21,17 +27,6 @@ SECTION
   margin-bottom: 100px;
 }
 
-/* section{
-    width:50%;
-    background-color:rgba(0, 0, 0, 0.356);
-    border: 1px grey solid;
-    display:inline-block;
-    margin: auto auto;
-    line-height:.5;
-    box-sizing:border-box;
-    border-radius:15px;
-   
-} */
 
 .section-container {
   width: 80%;

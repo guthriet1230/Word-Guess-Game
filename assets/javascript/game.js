@@ -33,11 +33,11 @@ function startGame() {
   winCounter = 0;
   for (var i = 0; i < randWord.length; i++) {
     underScores.push("_ ");
-    console.log(randWord);
+    // console.log(randWord);
 
-    if (randWord[i] === underScores[i]) {
-      wrongLetter = [];
-    }
+    // if (randWord[i] === underScores[i]) {
+    //   wrongLetter = [];
+    // }
   }
 }
 
@@ -51,16 +51,16 @@ document.onkeyup = function(event) {
     for (var i = 0; i < randWord.length; i++) {
       if (randWord[i] === userGuesses) {
         underScores[i] = userGuesses;
-        console.log(underScores);
+        // console.log(underScores);
         winCounter++;
         winLose();
       }
     }
   } else {
     wrongLetter.push(userGuesses);
-    console.log(wrongLetter);
+    // console.log(wrongLetter);
     guessesLeft--;
-    console.log(guessesLeft);
+    // console.log(guessesLeft);
     winLose();
     document.getElementById("letters-guessed").innerHTML = wrongLetter;
   }
@@ -79,11 +79,10 @@ function winLose() {
   if (winCounter === randWord.length) {
     alert("Winner!");
     wins++;
-    console.log(winCounter + " hello");
     document.getElementById("score-wins").innerHTML = wins;
     startGame();
   } else if (guessesLeft === 0) {
-    alert("Loser!");
+    alert("Try Again!");
     losses++;
     document.getElementById("score-losses").innerHTML = losses;
     startGame();

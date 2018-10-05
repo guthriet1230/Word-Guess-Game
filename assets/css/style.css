@@ -1,7 +1,6 @@
-#backgroundimg {
-  position: fixed;
-  z-index: -100;
-  top: 35px;
+html{
+  background: url(http://getwallpapers.com/wallpaper/full/3/2/4/997002-most-popular-fairytale-background-1920x1080-for-iphone-6.jpg) no-repeat center center fixed; 
+  background-size: cover;
 }
 
 /* ------------------------------
@@ -25,6 +24,14 @@ SECTION
 .row {
   margin-top: 40px;
   margin-bottom: 100px;
+}
+
+#winner-display, #loser-display{
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.356);
+  display: inline-block;
+  border-radius: 15px;
+  padding:15px;
 }
 
 .section-container {

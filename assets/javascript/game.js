@@ -3,7 +3,15 @@ var wordBank = [
   "gremlin",
   "dragon",
   "shrek",
+  "elves",
+  "mermaids",
+  "centaur",
+  "cyclops",
+  "giant",
   "griffin",
+  "gnome",
+  "nymph",
+  "troll",
   "centaur",
   "siren",
   "minotaur",
@@ -11,8 +19,12 @@ var wordBank = [
   "phoenix",
   "unicorn",
   "leprechaun",
-  "princess"
+  "princess",
+  "prince"
 ];
+
+var letters =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; 
+
 var wins = 0;
 var losses = 0;
 var wrongLetter = [];
@@ -20,7 +32,9 @@ var guessesLeft = 6;
 var underScores = [];
 var userGuesses = [];
 var randWord;
-var winCounter = 0;
+
+var guessesValidation = true;
+// var winCounter = 0;
 
 // startGame Function
 // =======================================
@@ -30,37 +44,43 @@ function startGame() {
   underScores = [];
   guessesLeft = 6;
   wrongLetter = [];
-  winCounter = 0;
+  // winCounter = 0;]
+  guessesValidation=true;
+
+  document.getElementById("winner-display").style.display = "none";
+  document.getElementById("loser-display").style.display = "none";
+  document.getElementById("guesses-left").innerHTML = guessesLeft;
+  document.getElementById("letters-guessed").innerHTML = wrongLetter;
+
   for (var i = 0; i < randWord.length; i++) {
     underScores.push("_ ");
-    // console.log(randWord);
-
-    // if (randWord[i] === underScores[i]) {
-    //   wrongLetter = [];
-    // }
   }
+  document.getElementById("word-blanks").innerHTML = underScores.join("");
 }
 
 // User Guesses
 // =======================================
 document.onkeyup = function(event) {
   userGuesses = event.key;
+  if (letters.indexOf(userGuesses) > -1 && guessesValidation){
+    
+  
+
   //Checking if the letter exists inside of the word
   console.log(userGuesses);
   if (randWord.indexOf(userGuesses) > -1) {
     for (var i = 0; i < randWord.length; i++) {
       if (randWord[i] === userGuesses) {
         underScores[i] = userGuesses;
-        // console.log(underScores);
-        winCounter++;
+        // console.log(underScores.join(""));
+  
+        // winCounter++;
         winLose();
       }
     }
   } else {
     wrongLetter.push(userGuesses);
-    // console.log(wrongLetter);
     guessesLeft--;
-    // console.log(guessesLeft);
     winLose();
     document.getElementById("letters-guessed").innerHTML = wrongLetter;
   }
@@ -70,22 +90,25 @@ document.onkeyup = function(event) {
   if (userGuesses[i] != underScores[i]) {
     userGuesses.push(wrongLetter);
   }
+}
 };
 
 // winLose Function
 // =======================================
 
 function winLose() {
-  if (winCounter === randWord.length) {
-    alert("Winner!");
+  if (underScores.join("") === randWord) {
     wins++;
     document.getElementById("score-wins").innerHTML = wins;
-    startGame();
+    document.getElementById("winner-display").style.display = "block";
+    guessesValidation = false;
+    // startGame();
   } else if (guessesLeft === 0) {
-    alert("Try Again!");
     losses++;
     document.getElementById("score-losses").innerHTML = losses;
-    startGame();
+    document.getElementById("loser-display").style.display = "block";
+    // startGame();
+    guessesValidation = false;
   }
 }
 
@@ -93,3 +116,11 @@ function winLose() {
 //=============================================
 
 startGame();
+document.getElementById("restart-button").onclick = function() {
+  startGame();
+  console.log("winner");
+};
+document.getElementById("restart-button2").onclick = function() {
+  startGame();
+  console.log("loser");
+};

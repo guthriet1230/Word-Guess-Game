@@ -6,8 +6,8 @@ This is a hangman game with a fantastical twist (fantasy, greek mythology, etc.)
 ---
 https://guthriet1230.github.io/Word-Guess-Game/
 
-### Technologies Used
----
+Alt- Technologies Used
+------
 - HTML
 - CSS
 - Vanilla Javascript

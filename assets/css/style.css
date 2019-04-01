@@ -38,7 +38,7 @@ SECTION
 }
 
 #winner-display img, #loser-display img{
-width:100%;
+width:70%;
 margin-bottom:10px;
 }
 
@@ -115,6 +115,7 @@ aside {
   border: 1px grey solid;
   display: inline-block;
   border-radius: 15px;
+  height:500px;
 }
 
 .aside-paragraph {
@@ -134,7 +135,7 @@ aside {
 }
 
 #hangman {
-  height: 370px;
+  height: 420px;
   margin: 5px;
   margin-left: 15px;
   margin-top: 0;
@@ -225,5 +226,21 @@ Media Screen 768px
   .aside-header {
     background-color: rgba(0, 0, 0, 0);
     border: none;
+  }
+
+  #winner-display, #loser-display{
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    border: 1px rgba(0,0,0,0) solid;
+    border-top:  2px grey solid;
+    border-bottom: 2px grey solid;
+    display: inline-block;
+    border-radius: 0;
+    padding:15px;
+    font-family: "Luckiest Guy", cursive;
+    text-align: center;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
   }
 }
